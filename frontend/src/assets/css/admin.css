@@ -1,0 +1,96 @@
+/* Admin styles — scoped and tidy */
+
+.admin-area { position: relative; padding-top: 36px; padding-bottom: 88px; }
+
+.admin-area .admin-container {
+  width: 1080px;
+  max-width: 96vw;
+  margin: 24px auto 40px auto;
+  padding: 0 16px;
+  color: #111;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.admin-area .admin-row { display: flex; gap: 20px; }
+.admin-area .admin-col, .admin-area .admin-col-2 {
+  flex: 1; display: flex; flex-direction: column; gap: 20px; min-width: 0;
+}
+.admin-area .admin-col-2 { flex: 2; }
+/* Keep right column tidy and narrow for better balance */
+.admin-area .admin-col { max-width: 420px; }
+
+/* Gradient header for profile */
+.admin-area .admin-grad-bar {
+  height: 120px;
+  background: linear-gradient(90deg, #4b008e 0%, #6a1bb6 60%, #7c3aed 100%);
+  display: flex; align-items: center; padding-left: 24px;
+}
+
+/* Typography */
+.admin-area .admin-title { font-size: 1.1rem; margin: 0; font-weight: 600; }
+.admin-area .admin-subtitle { margin: 2px 0 0; color: #666; font-size: 0.95rem; }
+.admin-area .admin-title-xl { font-size: 1.8rem; margin: 6px 0 12px 0; font-weight: 800; text-align: center; }
+.admin-area .admin-note { color: #6b7280; margin: 0; text-align: center; font-weight: 600; }
+
+/* Avatars */
+.admin-area .admin-avatar-xl { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; background: #fff; }
+.admin-area .admin-avatar-m { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 1px solid #e6e6e6; }
+.admin-area .admin-avatar-s { width: 28px; height: 28px; border-radius: 50%; object-fit: cover; border: 1px solid #e6e6e6; margin-right: 8px; }
+.admin-area .admin-ring { box-shadow: 0 0 0 3px #4b2dbd inset; border-color: #4b2dbd; }
+
+/* Cards */
+.admin-area .admin-card { background: #fff; border: 1px solid #e8e8e8; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); overflow: hidden; }
+.admin-area .admin-card-header { display: flex; align-items: center; gap: 14px; padding: 14px 16px; border-bottom: 1px solid #f0f0f0; }
+.admin-area .admin-card-title { padding: 12px 16px; font-weight: 600; border-bottom: 1px solid #f0f0f0; }
+.admin-area .admin-card-title.theme { background: #24104f; color: #fff; font-style: italic; border-bottom: 2px solid #4b2dbd; }
+.admin-area .admin-card-title.right { display: flex; align-items: center; gap: 10px; }
+.admin-area .admin-card-body { padding: 12px 16px; }
+.admin-area .admin-card-footer { background: #0e0e0e; color: #cbb2ff; text-align: center; padding: 10px 0; border-top: 2px solid #4b2dbd; }
+.admin-area .admin-badge { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; background: #fff; color: #2d1b69; border: 3px solid #4b2dbd; font-weight: 800; }
+
+/* Lines */
+.admin-area .admin-item-line { display: flex; align-items: center; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #f5f5f5; min-height: 48px; }
+.admin-area .admin-item-line:last-child { border-bottom: 0; }
+.admin-area .admin-line-start { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.admin-area .admin-line-end { display: flex; align-items: center; gap: 12px; margin-left: auto; }
+
+/* Truncate long product names so rows stay compact */
+.admin-area .admin-line-start span { max-width: 260px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+@media (max-width: 900px) {
+  .admin-area .admin-line-start span { max-width: 180px; }
+}
+
+/* Chips */
+.admin-area .admin-chip { background: #f5f5f5; border: 1px solid #e6e6e6; color: #333; padding: 6px 10px; border-radius: 8px; cursor: pointer; font: inherit; min-width: 112px; text-align: center; font-weight: 600; font-size: 0.9rem; }
+.admin-area .admin-chip:hover { background: #eee; }
+.admin-area .admin-chip.chip-success { background: #e8f5e9; border-color: #c8e6c9; color: #2e7d32; }
+.admin-area .admin-chip.chip-info { background: #e3f2fd; border-color: #bbdefb; color: #1565c0; }
+.admin-area .admin-chip.chip-warning { background: #fff8e1; border-color: #ffecb3; color: #a05a00; }
+
+/* Links & misc */
+.admin-area .admin-link { color: #4a148c; text-decoration: none; font-weight: 600; }
+.admin-area .admin-link:hover { text-decoration: underline; }
+.admin-area .admin-list { padding-left: 18px; line-height: 1.7; margin: 0; }
+.admin-area .admin-meta { margin-top: 8px; color: #777; font-size: 0.95rem; }
+
+/* Dark mode */
+.admin-area.admin-dark { color: #eaeaea; }
+.admin-area.admin-dark .admin-card { background: #1a1a1a; border-color: #2a2a2a; box-shadow: none; }
+.admin-area.admin-dark .admin-card-header, .admin-area.admin-dark .admin-card-title { border-color: #2a2a2a; }
+.admin-area.admin-dark .admin-avatar-m, .admin-area.admin-dark .admin-avatar-s { border-color: #2a2a2a; }
+.admin-area.admin-dark .admin-chip { background: #2a2a2a; border-color: #333; color: #ddd; }
+.admin-area.admin-dark .admin-link { color: #cbb2ff; }
+.admin-area.admin-dark .admin-card-title.theme { background: #1c0f3d; border-bottom-color: #3a2691; }
+.admin-area.admin-dark .admin-card-footer { background: #0b0b0b; border-top-color: #3a2691; color: #d7ceff; }
+
+/* Dark mode toggle */
+.admin-area .admin-darkmode-btn { position: fixed; left: 50%; transform: translateX(-50%); bottom: 16px; background: #ffe766; border: 1px solid #e6c400; border-radius: 10px; padding: 10px 16px; cursor: pointer; font-weight: 800; color: #1a1a1a; }
+.admin-area.admin-dark .admin-darkmode-btn { background: #2a2a2a; border-color: #333; color: #eaeaea; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .admin-area .admin-container { width: 98vw; padding: 0 8px; }
+  .admin-area .admin-row { flex-direction: column; gap: 14px; }
+  .admin-area .admin-col { max-width: none; }
+  .admin-area { padding-top: 32px; padding-bottom: 96px; }
+}
